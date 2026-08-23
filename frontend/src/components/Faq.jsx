@@ -1,4 +1,4 @@
-import heroAI from "@/assets/img/image0AI.jpeg";
+import heroAIing from "@/assets/img/everphoto.jpg";
 
 const FAQS = [
   {
@@ -24,36 +24,40 @@ export default function FAQ() {
           {/* Content */}
           <div className="order-2 lg:order-1">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0F9AC5]/10 text-[#0E2258] text-sm font-semibold">
-              About EverAI
+              EverAI Mentorship Program
             </span>
 
             <h3 className="mt-5 text-4xl md:text-6xl font-black leading-tight text-[#0E2258]">
-              Unlock Global Remote Job
+              Learn, Earn &
               <span className="block bg-gradient-to-r from-[#0E2258] via-[#0F9AC5] to-[#00E57B] bg-clip-text text-transparent">
-                Opportunities with EverAI
+                Grow with EverAI
               </span>
             </h3>
 
             <p className="mt-6 text-black/60 leading-relaxed text-lg">
-              Signing up on EverAI Assistant gives you access to a new dimension
-              of opportunities within the global digital labour market.
+              Understanding our products and opportunities is not a myth as we
+              have provided every subscriber with a personal mentor immediately
+              after signing up.
             </p>
 
             <p className="mt-4 text-black/60 leading-relaxed">
-              EverAI has been developed to source and distribute remote job
-              opportunities from around the world, helping subscribers discover
-              relevant opportunities without having to search endlessly across
-              multiple platforms.
+              Our mentorship program creates a pathway where every EverAI
+              subscriber receives dedicated guidance and support to fully
+              understand all monetization opportunities available on Evermore.
             </p>
 
             <p className="mt-4 text-black/60 leading-relaxed">
-              The system is designed to identify, filter, and promptly notify
-              subscribers when new remote jobs and opportunities become
-              available, paying as high as{" "}
-              <span className="font-semibold text-[#0E2258]">$18.6/hour</span>.
-              Most job offers are simple tasks that require little to no
-              experience, special skills, or qualifications.
+              Your personal mentor will help you understand how to navigate the
+              platform, explore available earning opportunities, and, most
+              importantly, learn how to earn hourly while training our
+              generative AI.
             </p>
+
+            <div className="mt-6 inline-flex items-center px-4 py-2 rounded-xl bg-[#00E57B]/10 border border-[#00E57B]/20">
+              <span className="font-semibold text-[#0E2258]">
+                Earn up to $18.6/hour while contributing to AI training.
+              </span>
+            </div>
           </div>
 
           {/* Image */}
@@ -62,8 +66,8 @@ export default function FAQ() {
 
             <div className="relative overflow-hidden rounded-[32px] border border-black/10">
               <img
-                src={heroAI}
-                alt="EverAI Remote Jobs"
+                src={heroAIing}
+                alt="EverAI Mentorship Program"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -92,10 +96,7 @@ export default function FAQ() {
 
           <div className="mt-12 space-y-4">
             {FAQS.map((item) => (
-              <details
-                key={item.q}
-                className=""
-              >
+              <details key={item.q} className="">
                 <summary className="cursor-pointer list-none p-5 flex items-center justify-between font-semibold text-[#0E2258]">
                   {item.q}
                   <span className="text-[#0F9AC5] text-xl">+</span>

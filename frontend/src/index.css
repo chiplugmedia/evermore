@@ -42,7 +42,7 @@ button {
 .btn-black,
 button {
   /* background: #000000; */
-  color: #ffffff;
+  /* color: #ffffff; */
   transition: all .35s ease;
 }
 

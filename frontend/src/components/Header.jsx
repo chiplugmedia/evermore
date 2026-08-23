@@ -105,7 +105,7 @@ export default function Header() {
               {/* Action Buttons */}
               <div className="hidden lg:flex items-center gap-4">
                 <Link
-                  to="/login"
+                  to="#"
                   className="text-[#0E2258] font-semibold hover:text-[#0F9AC5] transition-colors"
                 >
                   Log In
@@ -185,7 +185,7 @@ export default function Header() {
 
             <div className="mt-5 pt-5 border-t border-[#0F9AC5]/10 flex flex-col gap-3">
               <Link
-                to="/login"
+                to="#"
                 onClick={() => setMenuOpen(false)}
                 className="text-center py-3 rounded-2xl border border-[#0F9AC5]/15 text-[#0E2258] font-semibold hover:bg-[#0F9AC5]/5 transition"
               >

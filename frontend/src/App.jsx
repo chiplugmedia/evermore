@@ -13,7 +13,6 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-
         <TelegramSupport />
       </div>
     </BrowserRouter>

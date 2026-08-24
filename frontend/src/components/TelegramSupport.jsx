@@ -38,7 +38,7 @@ export default function TelegramSupport({
 
         .telegram-support-btn:hover {
           transform: translateY(-2px);
-          box-shadow: 0 6px 18px rgba(15, 154, 197, 0.4);
+          
           color: #FFFFFF;
         }
 

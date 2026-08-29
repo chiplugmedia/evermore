@@ -59,7 +59,7 @@ export default function Footer() {
 
               <ul className="mt-4 space-y-3 text-sm text-white/60">
                 <li>
-                  <a href="#about" className="hover:text-white transition">
+                  <a href="about" className="hover:text-white transition">
                     About Evermore
                   </a>
                 </li>
@@ -91,24 +91,18 @@ export default function Footer() {
               <ul className="mt-4 space-y-3 text-sm text-white/60">
                 <li>
                   <a href="#" className="hover:text-white transition">
-                    About Us
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="hover:text-white transition">
                     Careers
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="hover:text-white transition">
+                  <a href="privacy" className="hover:text-white transition">
                     Privacy Policy
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="hover:text-white transition">
+                  <a href="terms" className="hover:text-white transition">
                     Terms & Conditions
                   </a>
                 </li>

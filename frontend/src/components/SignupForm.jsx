@@ -62,16 +62,13 @@ export default function SignupForm() {
     try {
       setLoading(true);
 
-      const res = await fetch(
-        "http://api.evermorenetwork.com/api/create-payment",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
+      const res = await fetch("https://api.evermorenetwork.com/api/create-payment", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(form),
+      });
 
       const data = await res.json();
 

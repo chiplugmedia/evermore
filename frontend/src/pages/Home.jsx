@@ -9,6 +9,7 @@ import Cta from '@/components/Cta';
 import CallToAction from '../components/tasks';
 import AboutSection from '../components/aboutus';
 import TasksSection from '../components/tasks';
+import Video from '../components/Video';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <TasksSection />
       <HowItWorks />
+      <Video />
       <AboutSection />
       <Plans />
       <Faq />

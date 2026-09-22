@@ -10,6 +10,8 @@ import CallToAction from '../components/tasks';
 import AboutSection from '../components/aboutus';
 import TasksSection from '../components/tasks';
 import Video from '../components/Video';
+import AdSense from "../components/AdSense";
+
 
 export default function Home() {
   return (

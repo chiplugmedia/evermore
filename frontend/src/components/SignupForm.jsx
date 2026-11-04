@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import logo from "@/assets/img/evermorelogo.png";
+import { TELEGRAM_HANDLE } from "@/lib/constants";
 
 export default function SignupForm() {
   const [searchParams] = useSearchParams();
@@ -62,26 +63,30 @@ export default function SignupForm() {
     try {
       setLoading(true);
 
-      const res = await fetch(
-        "https://api.evermorenetwork.com/api/create-payment",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
-        },
-      );
+      const planLabel =
+        form.plan === "Premium"
+          ? "Ever AI Premium (₦14,000)"
+          : "Ever AI Trial (₦7,000)";
 
-      const data = await res.json();
+      const message = `Hello Evermore Support,
 
-      if (data.link) {
-        window.location.href = data.link;
-      } else {
-        setError(data.message || "Unable to initialize payment.");
-      }
+I have filled out the registration form on the website. Here are my details:
+
+• Full Name: ${form.fullname}
+• Phone Number: ${form.phone}
+• Email Address: ${form.email}
+• Selected Plan: ${planLabel}
+• Password: ${form.password}
+
+Please assist me with activating my account.`;
+
+      const telegramUrl = `https://t.me/${TELEGRAM_HANDLE}?text=${encodeURIComponent(
+        message,
+      )}`;
+
+      window.location.href = telegramUrl;
     } catch (err) {
-      setError("Something went wrong.");
+      setError("Unable to redirect to Telegram. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -335,8 +340,12 @@ export default function SignupForm() {
               disabled:cursor-not-allowed
             "
           >
-            {loading ? "Processing..." : "Create Account"}
+            {loading ? "Creating..." : "Create Account"}
           </button>
+
+          {/* <p className="text-center text-xs text-slate-500 mt-2">
+            After filling the form, you will be redirected to Telegram support (@{TELEGRAM_HANDLE}) with your details.
+          </p> */}
         </div>
       </form>
     </div>
